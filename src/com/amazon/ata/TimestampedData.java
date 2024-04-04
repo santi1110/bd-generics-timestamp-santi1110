@@ -42,6 +42,10 @@ public class TimestampedData<T> {
         return timestamp;
     }
 
+    public  T getData(){
+        return data;
+    }
+
     @Override
     public String toString() {
         return String.format("{data: %s | timestamp: %s}", data, timestamp);

@@ -53,8 +53,13 @@ public class DataLogger {
 
         // PARTICIPANTS - implement logic to create a TimestampedData from each dataValues/timestampValues pair
         // and print each to the console (using System.out.println())
-
+        for (int i = 0; i < dataValues.length; i++) {
+            Integer data = dataValues[i];
+            ZonedDateTime timestamp = timestampValues[i];
+            TimestampedData<Integer> timestampedData = new TimestampedData<>(data, timestamp);
+            System.out.println(timestampedData); // Using toString() implicitly
+        }
         // PARTICIPANTS - remove these lines once you've implemented the logic above
-        System.out.println("NOTE: logData() isn't fully implemented yet.");
+      /*  System.out.println("NOTE: logData() isn't fully implemented yet.");*/
     }
 }
